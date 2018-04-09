@@ -15,7 +15,7 @@ namespace FormUI
                 //var output = connection.Query<Person>($"select * from People where LastName = '{ lastName }'").AsList();
                 
                 //Modified with stored procedure.
-                return connection.Query<Person>("dbo.People_GetByLastName @LastName", new { Lastname = lastName }).AsList();
+                return connection.Query<Person>("dbo.People_GetByLastName_2 @LastName", new { Lastname = lastName }).AsList();
 
             }
         }

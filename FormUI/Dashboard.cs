@@ -43,10 +43,12 @@ namespace FormUI
             DataAccess db = new DataAccess();
             db.InsertPerson(firstNameInsText.Text, lastNameInsText.Text, emailInsText.Text, phoneInsText.Text);
             firstNameInsText.Text = "";
-            lastNameInsText.Text = "";
             phoneInsText.Text = "";
+            lastNameInsText.Text = "";
             emailInsText.Text = "";
 
         }
+
+     
     }
 }

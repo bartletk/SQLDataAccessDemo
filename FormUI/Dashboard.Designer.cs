@@ -35,11 +35,11 @@
             this.firstNameInsLabel = new System.Windows.Forms.Label();
             this.firstNameInsText = new System.Windows.Forms.TextBox();
             this.phoneInsLabel = new System.Windows.Forms.Label();
-            this.phoneInsText = new System.Windows.Forms.TextBox();
+            this.lastNameInsText = new System.Windows.Forms.TextBox();
             this.emailInsLabel = new System.Windows.Forms.Label();
             this.emailInsText = new System.Windows.Forms.TextBox();
             this.lastNameInsLabel = new System.Windows.Forms.Label();
-            this.lastNameInsText = new System.Windows.Forms.TextBox();
+            this.phoneInsText = new System.Windows.Forms.TextBox();
             this.insertRecordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -87,7 +87,6 @@
             this.firstNameInsLabel.TabIndex = 5;
             this.firstNameInsLabel.Text = "First Name";
             this.firstNameInsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-          //  this.firstNameInsLabel.Click += new System.EventHandler(this.firstNameInsLabel_Click);
             // 
             // firstNameInsText
             // 
@@ -96,6 +95,7 @@
             this.firstNameInsText.Name = "firstNameInsText";
             this.firstNameInsText.Size = new System.Drawing.Size(225, 44);
             this.firstNameInsText.TabIndex = 4;
+//            this.firstNameInsText.TextChanged += new System.EventHandler(this.firstNameInsText_TextChanged);
             // 
             // phoneInsLabel
             // 
@@ -106,12 +106,13 @@
             this.phoneInsLabel.TabIndex = 7;
             this.phoneInsLabel.Text = "Phone Number";
             // 
-            // phoneInsText
+            // lastNameInsText
             // 
-            this.phoneInsText.Location = new System.Drawing.Point(414, 803);
-            this.phoneInsText.Name = "phoneInsText";
-            this.phoneInsText.Size = new System.Drawing.Size(225, 44);
-            this.phoneInsText.TabIndex = 6;
+            this.lastNameInsText.AcceptsReturn = true;
+            this.lastNameInsText.Location = new System.Drawing.Point(414, 685);
+            this.lastNameInsText.Name = "lastNameInsText";
+            this.lastNameInsText.Size = new System.Drawing.Size(225, 44);
+            this.lastNameInsText.TabIndex = 6;
             // 
             // emailInsLabel
             // 
@@ -138,12 +139,12 @@
             this.lastNameInsLabel.TabIndex = 11;
             this.lastNameInsLabel.Text = "Last Name";
             // 
-            // lastNameInsText
+            // phoneInsText
             // 
-            this.lastNameInsText.Location = new System.Drawing.Point(414, 681);
-            this.lastNameInsText.Name = "lastNameInsText";
-            this.lastNameInsText.Size = new System.Drawing.Size(225, 44);
-            this.lastNameInsText.TabIndex = 10;
+            this.phoneInsText.Location = new System.Drawing.Point(414, 803);
+            this.phoneInsText.Name = "phoneInsText";
+            this.phoneInsText.Size = new System.Drawing.Size(225, 44);
+            this.phoneInsText.TabIndex = 10;
             // 
             // insertRecordButton
             // 
@@ -159,14 +160,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 1022);
+            this.ClientSize = new System.Drawing.Size(1254, 1223);
             this.Controls.Add(this.insertRecordButton);
             this.Controls.Add(this.lastNameInsLabel);
-            this.Controls.Add(this.lastNameInsText);
+            this.Controls.Add(this.phoneInsText);
             this.Controls.Add(this.emailInsLabel);
             this.Controls.Add(this.emailInsText);
             this.Controls.Add(this.phoneInsLabel);
-            this.Controls.Add(this.phoneInsText);
+            this.Controls.Add(this.lastNameInsText);
             this.Controls.Add(this.firstNameInsLabel);
             this.Controls.Add(this.firstNameInsText);
             this.Controls.Add(this.searchButton);
@@ -189,11 +190,11 @@
         private System.Windows.Forms.Label firstNameInsLabel;
         private System.Windows.Forms.TextBox firstNameInsText;
         private System.Windows.Forms.Label phoneInsLabel;
-        private System.Windows.Forms.TextBox phoneInsText;
+        private System.Windows.Forms.TextBox lastNameInsText;
         private System.Windows.Forms.Label emailInsLabel;
         private System.Windows.Forms.TextBox emailInsText;
         private System.Windows.Forms.Label lastNameInsLabel;
-        private System.Windows.Forms.TextBox lastNameInsText;
+        private System.Windows.Forms.TextBox phoneInsText;
         private System.Windows.Forms.Button insertRecordButton;
     }
 }

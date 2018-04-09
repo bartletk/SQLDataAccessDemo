@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using Dapper;
 
@@ -14,9 +15,17 @@ namespace FormUI
                 //var output = connection.Query<Person>($"select * from People where LastName = '{ lastName }'").AsList();
                 
                 //Modified with stored procedure.
-                var output = connection.Query<Person>("dbo.People_GetByLastName @LastName", new { Lastname = lastName }).AsList();
+                return connection.Query<Person>("dbo.People_GetByLastName @LastName", new { Lastname = lastName }).AsList();
 
-                return output;
+            }
+        }
+
+        public void InsertPerson(string firstName, string lastName, string email, string phone)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("SampleDB")))
+            {
+                Person newPerson = new Person { FirstName = firstName, LastName = lastName, EmailAddress = email, PhoneNumber = phone };
+
             }
         }
     }
